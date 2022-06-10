@@ -1,21 +1,58 @@
+#Criar Carro
+class Carro:
+    def __init__(self,modelo_carro,veiculo_carro):
+        self.veiculo_carro = veiculo_carro
+        self.modelo_carro = modelo_carro
+    def __str__(self):
+        return self.veiculo_carro
+    def __int__(self):
+        return self.modelo_carro
+def AddCarro(modelo_carro,veiculo_carro):
+    ListaVeiculo_carro.append(veiculo_carro)
+    ListaModelo_carro.append(modelo_carro)
+ListaVeiculo_carro = []
+ListaModelo_carro = []
 
-""" 1 - tipo de veiculo
-2 - fabricante
-3 - modelo / motor
-4 - capacidade de oleo
-5 - numero do produto / nome do produto """
+#Criar Moto
+class Moto:
+    def __init__(self,veiculo_moto, modelo_moto):
+        self.veiculo_moto = veiculo_moto
+        self.modelo_moto = modelo_moto
+    def __str__(self):
+        return self.veiculo_moto
+    def __str__(self):
+        return self.modelo_moto
+def AddMoto(veiculo_moto, modelo_moto):
+    ListaVeiculo_moto.append(veiculo_moto)
+    ListaModelo_moto.append(modelo_moto)
+ListaVeiculo_moto = []
+ListaModelo_moto = []
 
-
-#Criar veiculo
-def Tipo_de_veiculo(Veiculo,Modelo_motor, Capacidade_Oleo):
-    ListaVeiculo.append(Veiculo)
-    ListaModelo_Motor.append(Modelo_motor)
+#Criar Capacidade Oleo
+class Capacidade_Oleo:
+    def __init__(self,Capacidade_Oleo):
+        self.Capacidade_Oleo = Capacidade_Oleo
+    def __float__(self,):
+        ListaCapacidade_Oleo.append(Capacidade_Oleo)
+        return self.Capacidade_Oleo
+def AddCapacidade_Oleo(Capacidade_Oleo):
     ListaCapacidade_Oleo.append(Capacidade_Oleo)
+ListaCapacidade_Oleo = []
 
 #Criar Produtos
-def Produtos(Fabricante,Nome_Produto):
-    ListaFabricante.append(Fabricante)
-    ListaNome_Produto.append(Nome_Produto)
+class Criar_Oleo:
+    def __int__(self,fabricante,nome_produto):
+        self.fabricante = fabricante
+        self.nome_produto = nome_produto
+    def __str__ (self):
+        return self.Fabricante
+    def __str__(self):
+        return self.Nome_Produto
+def AddProdutos(fabricante,nome_produto):
+    ListaFabricante.append(fabricante)
+    ListaNome_Produto.append(nome_produto)
+ListaFabricante = []
+ListaNome_Produto = []
 
 #Ler Produto
 def ConsultaProduto(Fabricante,Nome_Produto):
@@ -43,82 +80,3 @@ ListaFabricante = []
 ListaModelo_Motor = []
 ListaCapacidade_Oleo = []
 ListaNome_Produto = []
-
-
-
-""" def MostrarNota(nome):
-    for x in ListaNomes:
-        if x == nome:
-            matricula = ListaNomes.index(nome)
-        print("A nota de {} é {}".format(ListaNomes[matricula],ListaNotas[matricula]))
-
-def RemoverNota(nome):
-    for x in ListaNomes:
-        if x == nome:
-            matricula = ListaNomes.index(nome)
-    ListaNotas.pop(matricula)
-    ListaNomes.pop(matricula) """
-
-""" escolha = 9
-while escolha != 0:
-    print('-'*30)
-    print("Bom dia, o que deseja? ")
-    print("Para cadastrar notas digite 1")
-    print("Para modificar notas digite 2")
-    print("Para mostrar notas digite 3")
-    print("Para listar todas as notas digite 4")
-    print("Para remover notas digite 5")
-    print("Para encerrar digite 0")
-    print('-'*30)
-
-escolha = int(input())
-while True:
-    if escolha == 1:
-        print('-'*30)
-        aluno = str(input("Qual aluno?"))
-        print('-'*30)
-        nota = int(input("Qual a Nota?"))
-        print('-'*30)
-        AdicionarAluno(aluno,nota)
-        print("Operação concluida.")
-        print('-'*30)
-        break
-    elif escolha == 2:
-        print('-'*30)
-        aluno = input("Qual aluno?")
-        print('-'*30)
-        nota = input("Qual a nova Nota?")
-        print('-'*30)
-        ModificarNota(aluno,nota)
-        print("Operação concluida.")
-        print('-'*30)
-        break
-    elif escolha == 3:
-        print('-'*30)
-        aluno = input("Qual aluno?")
-        print('-'*30)
-        MostrarNota(aluno)
-        print('-'*30)
-        print("Operação concluida.")
-        break
-    elif escolha == 4:
-        print('-'*30)
-        MostrarTodasNota()
-        print('-'*30)
-        print("Operação concluida.")
-        print('-'*30)
-        break
-    elif escolha == 5:
-        print('-'*30)
-        aluno = input("Qual aluno?")
-        print('-'*30)
-        RemoverNota(aluno)
-        print('-'*30)
-        print("Operação concluida.")
-        break
-    elif escolha == 0:
-        print("fim do programa")
-        break
-    else:
-        print("Desculpe, valor digitado é inválido")  
-        break """
